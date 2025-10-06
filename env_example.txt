@@ -1,0 +1,12 @@
+# Configuración del Sistema Origen (Extracción)
+URL_ORIGEN=https://tu-sistema-origen.com/login.php
+USER_ORIGEN=tu_usuario_origen
+PASS_ORIGEN=tu_contraseña_origen
+
+# Configuración del Sistema Destino (Inserción)
+URL_DESTINO=https://tu-sistema-destino.com
+USER_DESTINO=tu_usuario_destino
+PASS_DESTINO=tu_contraseña_destino
+
+# Configuración del navegador
+HEADLESS_MODE=true

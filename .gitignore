@@ -1,0 +1,84 @@
+# Archivos de configuración sensibles
+.env
+*.env
+config_local.py
+
+# Archivos de credenciales
+credenciales.py
+config_privado.py
+
+# Logs y archivos de salida
+*.log
+*.csv
+*.json
+reporte_*.json
+datos_*.csv
+eventos_*.csv
+
+# Archivos temporales de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Entornos virtuales
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Sistema operativo
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Archivos de backup
+backup_*/
+*.bak
+*.backup
+*.old
+
+# Archivos de navegador
+chromedriver*
+geckodriver*
+*.exe
+
+# Archivos de sesión
+session_*
+temp_*
+tmp_*
+
+# Archivos de prueba
+test_output/
+pruebas_*/
