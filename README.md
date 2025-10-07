@@ -1,14 +1,23 @@
-# RPA de Transferencia de Eventos
+# RPA Jano's Eventos
 
-Este proyecto automatiza la transferencia de eventos entre dos sistemas web que carecen de API, utilizando técnicas de RPA (Robotic Process Automation) con Python y Selenium.
+Sistema automatizado de transferencia de eventos entre plataformas web utilizando RPA (Robotic Process Automation) con Python, Selenium y Node.js.
 
-## 🚀 Características
+## 🎯 ¡NUEVO! Sistema de Producción
 
-- **Automatización completa**: Login, extracción e inserción de datos
-- **Programación semanal**: Ejecución automática los lunes a las 09:00
-- **Manejo robusto de errores**: Logging detallado y recuperación de fallos
-- **Configuración segura**: Variables de entorno para credenciales
-- **Simulación humana**: Navegación que imita comportamiento humano
+**El sistema ha sido completamente refactorizado y está listo para producción.**
+
+👉 **[Ver Sistema de Producción →](production/)**
+
+### 🚀 Características del Sistema de Producción
+
+- **Arquitectura Modular**: Código organizado en componentes reutilizables
+- **API REST Completo**: Gestión de coordinaciones con Node.js/Express
+- **Logger Profesional**: Sistema de logs estructurados con rotación automática
+- **Configuración Centralizada**: Variables de entorno y validaciones
+- **Scripts de Deployment**: Inicio/detención automatizada del sistema
+- **Documentación Exhaustiva**: 4 guías completas (README, Inicio Rápido, Migración, Resumen)
+- **Manejo Robusto de Errores**: Reintentos automáticos y recuperación
+- **Backups Automáticos**: Respaldo de datos y CSV
 
 ## 📋 Requisitos
 
@@ -16,23 +25,32 @@ Este proyecto automatiza la transferencia de eventos entre dos sistemas web que 
 - Google Chrome o Microsoft Edge
 - Acceso a los dos sistemas web
 
-## 🛠️ Instalación
+## 🛠️ Instalación Rápida
 
-1. **Clonar/descargar el proyecto**
-2. **Instalar dependencias:**
+### Sistema de Producción (Recomendado)
+
+```bash
+cd production
+./scripts/start_system.sh
+python3 src/main.py
+```
+
+**[📖 Ver Guía Completa de Instalación](production/INICIO_RAPIDO.md)**
+
+### Sistema Legacy (Archivos antiguos)
+
+Los archivos originales están disponibles en la raíz del proyecto para referencia.
+
+1. **Instalar dependencias:**
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Configurar variables de entorno:**
+2. **Configurar variables de entorno:**
    ```bash
    cp env_example.txt .env
    ```
-   Edita el archivo `.env` con tus credenciales reales.
-
-4. **Configurar selectores HTML:**
-   - Edita `configuracion_selectores.py`
-   - Reemplaza todos los selectores con los de tus sistemas reales
+   Edita el archivo `.env` con tus credenciales reales
 
 ## ⚙️ Configuración
 
@@ -165,8 +183,54 @@ Si encuentras problemas:
 3. Prueba el login manual en ambos sistemas
 4. Ejecuta `test_rpa.py` para diagnóstico
 
+## 🎯 Sistema de Producción
+
+### Estructura del Proyecto
+
+```
+production/
+├── src/
+│   ├── main.py                    # Script principal
+│   ├── rpa/extractor_eventos.py   # Extractor RPA
+│   ├── api/server.js              # API Server
+│   ├── sync/sincronizador.py      # Sincronizador
+│   └── utils/                     # Config + Logger
+├── scripts/                       # Scripts de deployment
+├── config/                        # Configuración
+└── docs/                          # Documentación
+```
+
+### Documentación Disponible
+
+- **[README.md](production/README.md)** - Documentación completa del sistema
+- **[INICIO_RAPIDO.md](production/INICIO_RAPIDO.md)** - Guía de inicio en 5 minutos
+- **[MIGRACION.md](production/MIGRACION.md)** - Guía de migración
+- **[RESUMEN_SISTEMA.md](production/RESUMEN_SISTEMA.md)** - Vista ejecutiva
+
+### Inicio Rápido
+
+```bash
+# 1. Ir al directorio de producción
+cd production
+
+# 2. Configurar credenciales
+nano config/production.env
+
+# 3. Iniciar sistema
+./scripts/start_system.sh
+
+# 4. Ejecutar RPA
+python3 src/main.py
+```
+
 ## 📄 Licencia
 
 Este proyecto es de uso interno. No distribuir sin autorización.
+
+---
+
+**Desarrollado por:** Sebastian Maza  
+**Repositorio:** https://github.com/MazaSebastian/RPAJanos  
+**Versión Producción:** 1.0.0
 
 
