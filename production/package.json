@@ -1,0 +1,33 @@
+{
+  "name": "rpa-janos-eventos",
+  "version": "1.0.0",
+  "description": "Sistema RPA para transferencia automatizada de eventos - Jano's Group",
+  "main": "src/api/server.js",
+  "scripts": {
+    "start": "node src/api/server.js",
+    "dev": "nodemon src/api/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rpa",
+    "automation",
+    "events",
+    "api",
+    "janos"
+  ],
+  "author": "Sebastian Maza",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}
+
